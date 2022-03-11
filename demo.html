@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px auto;
+
+        }
+        body{
+            background-image:url(../10-03TH/backrough.jpg) ;
+        }
+        .wrapper{
+            height: 800px;
+            width: 1089px;
+            background-color: antiquewhite;
+        }
+        nav{
+            height: 50Px;
+            width: 1089px;
+            line-height: 50px;
+            background-color: rgb(245,207,161);
+
+        }
+        header{
+            height: 150px;
+            width: 1089;
+            background-image: url(../10-03TH/h1.jpg);
+            text-align: center;
+            line-height: 150px;
+            font-size: 100px;
+            color: orange;
+            text-shadow: 2px 2px 2px #cc0011;
+        }
+        .content{
+            height: 400px;
+            width: 1089px;
+            background-color: rgb(233,170,87);
+        }
+        aside{
+            height: 400px;
+            width: 400px;
+            background-color: rgb(126,121,114);
+            float:left;
+        }
+        section{
+            height: 400px;
+            width: 689px;
+            background-color: rgb(241,247,248);
+            float: left;
+        }
+        .menu li{
+            float: left;
+            width: 150px;
+            height: 50px;
+            line-height: 50px;
+            list-style: none;
+            text-indent: 20px;
+            background-color: rgb(245,207,161);
+            position: relative;
+        }
+        a{
+            color: yellow;
+            font-weight: none;
+            text-decoration: none ;
+        }
+        .menu li:hover{
+            background-color: rgb(177,141,87);
+        }
+        li:hover>a{
+            color: blue;
+            font-style: italic;
+        }
+        .menu li .submenu{
+            display: none;
+            position: absolute;
+        }
+        .menu li:hover.submenu{
+            display: block;
+        }
+        nav span form #txtEmail{
+            padding: 3px;
+            color: blue;
+        }
+        nav span form #btnGO{
+            padding: 3px;
+            color: rgb(219,115,30);
+            border-radius:50% ;
+            text-shadow: 2px 2px 2px #cc0011;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <ul class="menu">
+                <li><a href="http://iuh.edu.vn/">HOME</a></li>
+                <li><a href="http://iuh.edu.vn/">HOME</a></li>
+                <li><a href="http://iuh.edu.vn/">CONTACT</a>
+                    <ul class="submenu">
+                        <li><a href="">TVI</a></li>
+                        <li><a href="">INTERNET</a></li>
+                        <li><a href="">PHONE</a></li>
+                    </ul>
+                </li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">HELP</a></li>
+            </ul>
+            <span>
+                <form action="dangki.php">
+                    <label for="lbEmail">Email:</label>
+                    <input type="email" name="txtEmail" id="txtEmail" required placeholder="nhap email">
+                    <input type="Submit" value="GO" id="btnGO">
+                </form>
+            </span>
+        </nav>
+        <header>VIET NAM TOI YEU</header>
+        <div class="content">
+            <aside>
+                <article>
+                    <h5 style="position: absolute; font-weight:bold ; color: white; text-shadow:10px 20px 20px rgb(107,41,203) ;">GAME SHOW</h5>
+                    <img src="../10-03TH/a1.jpg" alt="" srcset="">
+                </article>
+                <article>
+                    <h5>HOAT DONG 2</h5>
+                    <img src="../10-03TH/a2.jpg" alt="" srcset="">
+                </article>
+                <article>
+                    <h5>HOAT DONG 3</h5>
+                    <img src="../10-03TH/a3.jpg" alt="" srcset="">
+                </article>
+            </aside>
+            <section>
+                <form action="dangky.php">
+                    <fieldset>
+                        <legend>THONG TIN CUA BAN</legend>
+                        <label for="lblHoten">Ho Ten</label>
+                        <input type="text" name="txtHT" id="txtHT" required placeholder="Nhap ho ten"><br><br>
+                        <label for="lblEmail">Email</label>
+                        <input type="text" name="txtEmail" id="txtEmail" required placeholder="Nhap Email"><br><br>
+                        <label for="lblNgaySinh">Ngay Sinh</label>
+                        <input type="date" name="txtNS" id="txtNS" required placeholder="Ngay Sinh" pattern="dd/mm/yyyy"><br><br>
+                        <input type="radio" name="radNam" id="radNam" value="Nam" checked><label for="Nam">Nam</label>
+                        <input type="radio" name="radNu" id="radNu" value="Nu" required><label for="Nu">Nu</label><br> <br>
+                        <input type="submit" value="GO" id="btnGO">
+                    </fieldset>
+                </form>
+            </section>
+        </div>
+        <footer></footer>
+    </div>
+</body>
+</html>
